@@ -1,5 +1,8 @@
 Depot::Application.routes.draw do
   #get "store/index"
+  match 'store/add_to_cart' => 'store#add_to_cart'
+  match 'store/empty_cart' => 'store#empty_cart'
+  match 'store/back' => 'store#back'
   resources :store
 
   resources :products

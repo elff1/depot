@@ -9,8 +9,20 @@
 		<%= image_tag("logo.png") %>
 		<%= @page_title || "Pragmatic Bookshelf" %>
 	</div>
-	<div id="main">
-		<%= yield :layout%>
+	<div id="columns">
+		<div id="side">
+			<a href="#">Home</a><br />
+			<a href="#">Questions</a><br />
+			<a href="#">News</a><br />
+			<a href="#">Contact</a><br />
+			<%= Time.now %>
+		</div>
+		<div id="main">
+			<% if flash[:notice] -%>
+				<div id="notice"><%= flash[:notice] %></div>
+			<% end -%>
+			<%= yield :layout%>
+		</div>
 	</div>
 </div>
 

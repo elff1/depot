@@ -15,3 +15,12 @@
 /tmp
 
 /.idea
+
+/doc/api
+/doc/app
+
+.bundle
+.DS_Store
+
+*.swp
+*~
